@@ -87,6 +87,7 @@ export function HomeScreenImpl() {
   }, []);
 
   const onFolderClick = useCallback((folder: string) => {
+    console.log(folder);
     setBrowsingFolder(folder);
   }, []);
 
@@ -99,6 +100,8 @@ export function HomeScreenImpl() {
 
   if (self == null) return null;
 
+  console.log('browsingFolder');
+  console.log(pcdsInFolder);
   return (
     <>
       <MaybeModal />
@@ -181,7 +184,7 @@ function FolderDetails({
       <span className="btn">
         <img draggable="false" src={icons.upArrow} width={18} height={18} />
       </span>
-      <span className="name">{folder}</span>
+      <span className="name">{folder.includes('Zuconnect') ? 'PolygonID Auth Credential' : folder}</span>
     </FolderHeader>
   );
 }
@@ -200,7 +203,8 @@ function FolderCard({
   return (
     <FolderEntryContainer onClick={onClick}>
       <img draggable="false" src={icons.folder} width={18} height={18} />
-      {getNameFromPath(folder)}
+      {getNameFromPath(folder).includes('Zuconnect') ? 'PolygonID Auth Credential' : getNameFromPath(folder)}
+
     </FolderEntryContainer>
   );
 }
@@ -234,12 +238,18 @@ const FolderHeader = styled.div`
   align-items: flex-start;
   flex-direction: row;
   border-bottom: 1px solid grey;
-  background: var(--bg-dark-gray);
+  background: var(--accent-dark);
   cursor: pointer;
   user-select: none;
 
   &:hover {
-    background: var(--bg-lite-gray);
+    //background: var(--bg-lite-gray);
+    background: var(--white);
+    color: var(--bg-dark-primary);
+  }
+  &:hover img {
+    //background: red;
+    filter: invert(1);
   }
 
   .name {
@@ -271,13 +281,22 @@ const FolderEntryContainer = styled.div`
   flex-direction: row;
   gap: 12px;
   border-bottom: 1px solid grey;
+  background: var(--accent-dark);
+
 
   &:last-child {
     border-bottom: none;
   }
 
+  &:hover img {
+    //background: red;
+    filter: invert(1);
+  }
   &:hover {
-    background: var(--primary-lite);
+    //background: var(--primary-lite);
+
+    background: var(--white);
+    color: var(--bg-dark-primary);
   }
 `;
 

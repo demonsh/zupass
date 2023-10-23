@@ -117,18 +117,18 @@ export function LoginScreen() {
       {redirectedFromAction ? (
         <>
           <TextCenter>
-            <H2>ZUPASS</H2>
+            <H1 style={{fontSize: 32}}>YOUR PERSONAL WALT</H1>
             <Spacer h={24} />
-            To complete this request, you need to either log into your existing
-            Zupass account, or create a new one.
+            This is an experimental personal walt for storing credentials, powered by
+            Zero-Knowledge.
           </TextCenter>
         </>
       ) : (
         <>
           <TextCenter>
-            <H1>ZUPASS</H1>
+            <H1 style={{fontSize: 32}}>YOUR PERSONAL VAULT</H1>
             <Spacer h={24} />
-            This is an experimental personal cryptography manager, powered by
+            This is an experimental personal walt for storing credentials, powered by
             Zero-Knowledge.
           </TextCenter>
         </>

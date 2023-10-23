@@ -1,11 +1,15 @@
 html {
-  --bg-dark-primary: #19473f;
+  --bg-dark-primary: #0a090d;
+  --accent-dark: #9a60ff;
+  --grey--2: #141217;
+
+  /*--bg-dark-primary: #19473f;*/
   --bg-lite-primary: #206b5e;
   --bg-dark-gray: #2a3231;
   --bg-lite-gray: #374b49;
   --primary-dark: #325f57;
-  --primary-lite: #468c80;
-  --accent-dark: #fcd270;
+  --primary-lite: #9a60ff;
+  /*--accent-dark: #fcd270;*/
   --accent-darker: #f4c24d;
   --accent-dark-rbg: 252, 210, 112;
   --accent-lite: #ffe5a4;

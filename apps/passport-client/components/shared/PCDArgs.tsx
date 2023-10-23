@@ -661,8 +661,10 @@ const ErrorText = styled.div`
 const Input = styled.input`
   width: 100%;
   height: 32px;
-  background-color: var(--bg-lite-primary);
-  border: 1px solid var(--bg-lite-primary);
+  background-color: inherit;
+  //background-color: var(--bg-lite-primary);
+  border: 1px solid var(--white);
+  //border: 1px solid var(--bg-lite-primary);
   color: var(--white);
   font:
     14px PlexSans,
@@ -677,8 +679,10 @@ const Input = styled.input`
 const TextareaInput = styled.textarea`
   width: 100%;
   height: 4em;
-  background-color: var(--bg-lite-primary);
-  border: 1px solid var(--bg-lite-primary);
+  background-color: inherit;
+  //background-color: var(--bg-lite-primary);
+  border: 1px solid var(--white);
+  //border: 1px solid var(--bg-lite-primary);
   color: var(--white);
   resize: vertical;
   font:

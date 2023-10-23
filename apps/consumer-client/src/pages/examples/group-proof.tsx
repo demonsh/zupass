@@ -44,21 +44,21 @@ export default function Page() {
   return (
     <>
       <HomeLink />
-      <h2>Generic Semaphore Group Membership Proof</h2>
+      <h2>Generic KYC Credential Proof</h2>
       <p>
         This page shows a working example of a 3rd party application that asks
-        Zupass for a Semaphore group membership proof.
+        Identity protocol for a KYC Credential.
       </p>
       <p>
-        The group we are using for demonstration purposes is a group that Zupass
-        maintains, which contains all of its users. I.e. anyone who has a Zupass
+        The group we are using for demonstration purposes is a group that Identity protocol
+        maintains, which contains all of its users. I.e. anyone who has a Identity protocol
         account should be able to successfully prove that to this 3rd party
         application.
       </p>
       <p>
-        The underlying PCD that this example uses is{" "}
-        <code>SempahoreGroupPCD</code>. You can find more documentation
-        regarding this PCD{" "}
+        The underlying Personal Vault that this example uses is{" "}
+        <code>Personal Vault</code>. You can find more documentation
+        regarding this Personal Vault{" "}
         <CodeLink file="/tree/main/packages/semaphore-group-pcd">
           here on GitHub
         </CodeLink>

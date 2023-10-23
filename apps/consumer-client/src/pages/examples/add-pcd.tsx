@@ -38,23 +38,23 @@ export default function Page() {
   return (
     <div>
       <HomeLink />
-      <h2>Prove and Add</h2>
+      <h2>Prove and Add Additional Credential to Vault</h2>
       <p>
-        This page contains several examples of how to add PCDs to Zupass. You
-        can add a PCD to Zupass in one of two ways:
+        This page contains several examples of how to add KYC Credential to Vault. You
+        can add a Credential to Identity Vault in one of two ways.
       </p>
-      <ul>
-        <li>
-          Add a PCD (which can be kind of dangerous if the user then expects
-          that PCD to be private, as is the case for adding a raw Semaphore
-          Identity).
-        </li>
-        <li>
-          Prove, and <i>then</i> add the PCD to Zupass. The application that
-          initiates this does not get a copy of the PCD back, it just adds it to
-          Zupass.
-        </li>
-      </ul>
+      {/*<ul>*/}
+      {/*  <li>*/}
+      {/*    Add a PCD (which can be kind of dangerous if the user then expects*/}
+      {/*    that PCD to be private, as is the case for adding a raw Semaphore*/}
+      {/*    Identity).*/}
+      {/*  </li>*/}
+      {/*  <li>*/}
+      {/*    Prove, and <i>then</i> add the PCD to Zupass. The application that*/}
+      {/*    initiates this does not get a copy of the PCD back, it just adds it to*/}
+      {/*    Zupass.*/}
+      {/*  </li>*/}
+      {/*</ul>*/}
       <ExampleContainer>
         <button onClick={addGroupMembershipProofPCD}>
           prove and add a group membership proof
@@ -77,12 +77,12 @@ export default function Page() {
         <br />
         <br />
         <button onClick={addIdentityPCD}>
-          add a new semaphore identity to Zupass
+          add a new Identity Credential
         </button>
         <br />
         <br />
         <button onClick={addWebAuthnPCD} disabled>
-          add a new webauthn credential to Zupass [REMOVED FOR DEVCONNECT]
+          add a new webauthn credential to Identity [REMOVED FOR DEVCONNECT]
         </button>
         <br />
         <br />
@@ -157,7 +157,7 @@ function AddEthAddrPCDButton() {
         zupassSignIn("eth-pcd");
       }}
     >
-      add a new Ethereum address to Zupass
+      add a new Ethereum address to Identity Vault
     </button>
   );
 }
@@ -262,7 +262,7 @@ function AddEthGroupPCDButton() {
         zupassSignIn("eth-group-pcd");
       }}
     >
-      add a new Ethereum Group Membership to Zupass [REMOVED FOR DEVCONNECT]
+      add a new Ethereum Group Membership to Identity Vault [REMOVED FOR DEVCONNECT]
     </button>
   );
 }

@@ -10,8 +10,10 @@ export default function Select<Option = unknown>(
 const StyledSelect = styled(ReactSelect)`
   .Select__control {
     width: 100%;
-    background-color: var(--bg-dark-gray);
-    border: 1px solid var(--bg-lite-gray);
+    //background-color: var(--bg-dark-gray);
+    background-color: inherit;
+    //border: 1px solid var(--bg-lite-gray);
+    border: 1px solid var(--white);
     font:
       14px PlexSans,
       system-ui,

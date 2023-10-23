@@ -37,10 +37,10 @@ export default function Page() {
   return (
     <>
       <HomeLink />
-      <h2>Semaphore Signature Proof</h2>
+      <h2>Message Signature Proof</h2>
       <p>
-        This page shows a working example of an integration with Zupass which
-        requests and verifies a semaphore signature from a holder of Zupass.
+        This page shows a working example of an integration with Identity protocol which
+        requests and verifies a message signature from a holder of Vault.
       </p>
       <ExampleContainer>
         <input
@@ -64,7 +64,7 @@ export default function Page() {
             [messageToSign, serverProving]
           )}
         >
-          Request Semaphore Signature
+          Request Signature
         </button>
         <label>
           <input

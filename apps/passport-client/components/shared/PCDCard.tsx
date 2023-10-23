@@ -83,9 +83,13 @@ function HeaderContent({
 
   let header;
   if (isMainIdentity) {
-    header = "ZUPASS IDENTITY";
+    header = "KYC CREDENTIAL";
   } else if (displayOptions?.header) {
     header = displayOptions.header.toUpperCase();
+    // header = 'ssss'
+    if (header.includes('ZUCONNECT')) {
+      header = 'PolygonID Credential'
+    }
   }
 
   const headerContent = header ? (
@@ -148,6 +152,8 @@ function CardBody({
 }) {
   const pcdCollection = usePCDCollection();
 
+  console.log('pcd');
+  console.log(pcd);
   if (isMainIdentity) {
     return <MainIdentityCard />;
   }
@@ -189,7 +195,9 @@ export const CardOutlineExpanded = styled.div`
   width: 100%;
   border-radius: 12px;
   border: 1px solid var(--accent-dark);
-  background: var(--primary-dark);
+  //background: var(--primary-dark);
+  background: var(--accent-dark);
+
   overflow: hidden;
 `;
 

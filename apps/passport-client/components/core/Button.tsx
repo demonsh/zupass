@@ -35,7 +35,7 @@ const buttonStyle = `
   word-break: break-word;
   width: 100%;
   padding: 12px;
-  color: var(--bg-dark-primary);
+  color: var(--white);
   border: none;
   border-radius: 99px;
   font-size: 16px;
@@ -44,7 +44,8 @@ const buttonStyle = `
   opacity: 1;
   cursor: pointer;
   &:hover {
-    background: var(--accent-darker);
+    background: var(--white);
+    color: var(--bg-dark-primary);
   }
   &:active:not([disabled]) {
     opacity: 0.9;
